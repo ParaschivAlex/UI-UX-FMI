@@ -1,0 +1,2 @@
+D:\UI-UX-FMI\UIux.Tests\obj\Debug\UIux.Tests.csproj.AssemblyReference.cache
+D:\UI-UX-FMI\UIux.Tests\obj\Debug\UIux.Tests.csproj.CoreCompileInputs.cache
