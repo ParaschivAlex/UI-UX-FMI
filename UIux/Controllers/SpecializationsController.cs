@@ -14,10 +14,19 @@ namespace UIux.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-		// GET: Specializations
-		public ActionResult Index()
+        // GET: Specializations
+        public ActionResult Index()
         {
-            return View(db.Specializations.ToList());
+            if (TempData.ContainsKey("message"))
+            {
+                ViewBag.message = TempData["message"].ToString();
+            }
+
+            var specializations = from specialization in db.Specializations
+                             orderby specialization.Name
+                                  select specialization;
+            ViewBag.Specializations = specializations;
+            return View();
         }
 
         // GET: Specializations/Create
@@ -94,6 +103,33 @@ namespace UIux.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public ActionResult Show(int id)
+        {
+            try
+            {
+                Specialization specialization = db.Specializations.Find(id);
+                var doctors = from doctor in db.Doctors
+                                 where doctor.SpecializationID == specialization.SpecializationID
+                              select doctor;
+                //Console.WriteLine(doctors);
+                if (doctors != null)
+                {
+                    ViewBag.Categories = specialization;
+                    ViewBag.Fresheners = doctors;
+                    return View(specialization);
+                }
+                else
+                {
+                    throw new NullReferenceException("You can't check a specialization that has no doctors!");
+                }
+            }
+            catch (Exception e)
+            {
+                TempData["message"] = e;
+                return Redirect("/Specializations/Index");
+            }
         }
     }
 }

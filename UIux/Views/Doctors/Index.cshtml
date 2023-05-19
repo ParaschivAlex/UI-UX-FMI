@@ -1,0 +1,66 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2 class="text-left">MEDICI</h2>
+        </div>
+        <div class="col-md-4 text-right">
+            @using (Html.BeginForm("Index", "Doctors", FormMethod.Get))
+            {
+                @Html.TextBox("search", ViewBag.CurrentFilter as string)
+                <button type="submit" value="Search" class="btn btn-success pull-right fa fa-search" />
+            }
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="dropdown">
+                <button class="btn btn-success dropdown-toggle fa" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sort
+                </button>
+                <ul class="dropdown-menu text-center text-center" aria-labelledby="dropdownMenuButton">
+                    <li>@Html.ActionLink("Price Ascending", "Index", new { sortOrder = "1", currentFilter = ViewBag.CurrentFilter }, new { @class = "text-center", @style = "color:black" })</li>
+                    <li>@Html.ActionLink("Price Descending", "Index", new { sortOrder = "2", currentFilter = ViewBag.CurrentFilter }, new { @class = "text-center", @style = "color:black" })</li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>@Html.ActionLink("Highest Rating", "Index", new { sortOrder = "4", currentFilter = ViewBag.CurrentFilter }, new { @class = "text-center", @style = "color:black" })</li>
+                    <li>@Html.ActionLink("Lowest Rating", "Index", new { sortOrder = "3", currentFilter = ViewBag.CurrentFilter }, new { @class = "text-center", @style = "color:black" })</li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>@Html.ActionLink("Oldest added", "Index", new { sortOrder = "5", currentFilter = ViewBag.CurrentFilter }, new { @class = "text-center", @style = "color:black" })</li>
+                    <li>@Html.ActionLink("Newest added", "Index", new { sortOrder = "6", currentFilter = ViewBag.CurrentFilter }, new { @class = "text-center", @style = "color:black" })</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row row-cols-1 row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-xl-1">
+
+        @foreach (UIux.Models.Doctor doctor in ViewBag.Doctors)
+        {
+            <div class="col mb-4">
+                <div class="card h-100 border-secondary mb-3">
+                      <img class="card-img-top" src="@doctor.Photo" alt="doctor image" style="height:200px;" />
+                    <div class="card-body">
+                            <h3 class="card-title text-center">@doctor.FirstName @doctor.SecondName</h3>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center">
+                            <h4>@doctor.Specialization.Name</h4>
+                        </li>
+                        <li class="list-group-item text-center">
+                            <h4>@doctor.Specialization.SpecializationDescription</h4>
+                        </li>
+                        <li class="list-group-item text-center">
+                            <h4>@doctor.PriceRate*@doctor.Specialization.Price Lei</h4> <!--DE CALCULAT PRETUL: este pricerate * pretul de pe specializarea lui-->
+                        </li>
+                        <li class="list-group-item text-center">
+                            <a class="btn btn-info" href="/..../..../....">&ensp;Programeaza-te</a> <!--de bagat ruta corecta, daca avem 1 :))-->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        }&nbsp;
+    </div>
+    <br />
+
+    &nbsp;
+
+</div>

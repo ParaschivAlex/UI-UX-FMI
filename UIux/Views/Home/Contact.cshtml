@@ -1,17 +1,56 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿<!--e doar provizoriu, am pus iframe pt google maps, mai trebuie partea de jos de aranjat-->﻿
+@if (TempData.ContainsKey("message"))
+{
+    <h1>@ViewBag.message</h1>
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<style>
+    h1 {
+        color: darkblue;
+    }
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+    img {
+        border: 3px dashed indianred;
+    }
+</style>
+<body>
+    <h2 class="text-center">CONTACT</h2><br /><br />
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    <div class="container-fluid">
+        <div class="row" style="margin:5px 0 5px 0;">
+            <div class="col-md-6">
+                <div style="width: 100%"><div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">area maps</a></iframe></div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-center">Our time:</h2>
+                <h4 style="text-align:center">Monday - Friday: 8:00 - 19:00</h4>
+                &nbsp;
+                <h4 style="text-align:center">Saturday: 09:00 - 13:00</h4>
+                &nbsp;
+                <h4 style="text-align:center">Sunday: Closed</h4>
+                &nbsp;<br /><br />
+                <h3 style="text-align:left;padding-left:15px">If you want to tell us someting...</h3>
+                <section class="form-section">
+                    <div class="container">
+                        <div class="row">
+                            <form>
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name"><br>
+
+                                <label for="subject">Subject:</label>
+                                <input type="text" id="subject" name="subject"><br>
+
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email"><br>
+
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message"></textarea><br>
+
+                                <input type="submit" value="Send">
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>

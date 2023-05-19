@@ -14,6 +14,13 @@ namespace UIux.Models
         [Required(ErrorMessage = "Specialization name is required")]
         public string Name { get; set; }
 
+        [Required(ErrorMessage = "Specialization image is mandatory.")]
+        public string SpecializationImage { get; set; }
+
+        [Required(ErrorMessage = "Specialization description is mandatory.")]
+        [StringLength(256, ErrorMessage = "The description is maximum 256 character long.")]
+        public string SpecializationDescription { get; set; }
+
         public virtual ICollection<Doctor> Doctors { get; set; }
 
     }
