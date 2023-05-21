@@ -2,30 +2,199 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<style>
+    body {
+        font: 400 15px Lato, sans-serif;
+        line-height: 1.8;
+        color: #818181;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #303030;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    h4 {
+        font-size: 19px;
+        line-height: 1.375em;
+        color: #303030;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    .jumbotron {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 50px;
+        border-top: 4px solid #3fbbc0;
+        border-left: 4px solid #3fbbc0;
+        box-shadow: 5px 5px 11px 0px;
+    }
+
+    .navbar {
+        box-shadow: none;
+    }
+
+    #about {
+        padding: 60px 50px;
+    }
+
+    .bg-grey {
+        background-color: #f6f6f6;
+    }
+
+    .logo {
+        color: darkslategray;
+        font-size: 200px;
+    }
+
+    .thumbnail {
+        padding: 0 0 15px 0;
+        border: none;
+        border-radius: 0;
+    }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+
+    .carousel-control.right, .carousel-control.left {
+        background-image: none;
+        color: darkslategray;
+    }
+
+    .carousel-indicators li {
+        border-color: darkslategray;
+    }
+
+        .carousel-indicators li.active {
+            background-color: darkslategray;
+        }
+
+    .item h4 {
+        font-size: 19px;
+        line-height: 1.375em;
+        font-weight: 400;
+        font-style: italic;
+        margin: 70px 0;
+    }
+
+    .item span {
+        font-style: normal;
+    }
+
+    .panel {
+        border: 1px solid #f4511e;
+        border-radius: 0 !important;
+        transition: box-shadow 0.5s;
+    }
+
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+        }
+
+    .panel-footer .btn:hover {
+        border: 1px solid #f4511e;
+        background-color: #fff !important;
+        color: #f4511e;
+    }
+
+    .panel-heading {
+        color: #fff !important;
+        background-color: #f4511e !important;
+        padding: 25px;
+        border-bottom: 1px solid transparent;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .panel-footer {
+        background-color: white !important;
+    }
+
+        .panel-footer h3 {
+            font-size: 32px;
+        }
+
+        .panel-footer h4 {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .panel-footer .btn {
+            margin: 15px 0;
+            background-color: #f4511e;
+            color: #fff;
+        }
+
+    footer .glyphicon {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #f4511e;
+    }
+
+    .slide {
+        animation-name: slide;
+        -webkit-animation-name: slide;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        visibility: visible;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+<br />
+<div class="jumbotron text-center contact info-box">
+    <h1 style="color:black">MediConnect</h1>
+    <h4>Partenerul dumneavoastră de încredere în îngrijirea medicală online!</h4>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<section id="features" class="features">
+    <div class="section-title">
+        <h2>De ce sa alegi MediConnect?</h2>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="row">
+            <div class="col-lg-6 order-2 order-lg-1 aos-init aos-animate" data-aos="fade-right">
+                <div class="icon-box mt-5 mt-lg-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Consultații medicale online</h4>
+                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                </div>
+                <div class="icon-box mt-5">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Ușurință în gestionarea sănătății</h4>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                </div>
+                <div class="icon-box mt-5">
+                    <i class="bx bx-images"></i>
+                    <h4>Recomandări personalizate</h4>
+                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                </div>
+                <div class="icon-box mt-5">
+                    <i class="bx bx-shield"></i>
+                    <h4>Siguranță și confidențialitate</h4>
+                    <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                </div>
+            </div>
+            <div class="image col-lg-6 order-1 order-lg-2 aos-init aos-animate" style="background-image: url(&quot;https://media.istockphoto.com/id/1413031831/photo/medicine-doctor-holding-red-heart-shape-in-hand-medical-concept-stock-photo.jpg?b=1&s=170667a&w=0&k=20&c=QIzCtiV_e_YIyWNejIS2H28jyJDxG-XxNSbCyD6UKHM=&quot;);" data-aos="zoom-in"></div>
+        </div>
+
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+</section>

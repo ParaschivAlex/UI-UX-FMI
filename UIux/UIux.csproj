@@ -19,7 +19,8 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44389</IISExpressSSLPort>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -35,6 +36,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>SecurityRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -192,6 +194,100 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\css\style.css" />
+    <Content Include="Content\assets\img\about.jpg" />
+    <Content Include="Content\assets\img\apple-touch-icon.png" />
+    <Content Include="Content\assets\img\departments-1.jpg" />
+    <Content Include="Content\assets\img\departments-2.jpg" />
+    <Content Include="Content\assets\img\departments-3.jpg" />
+    <Content Include="Content\assets\img\departments-4.jpg" />
+    <Content Include="Content\assets\img\departments-5.jpg" />
+    <Content Include="Content\assets\img\doctors\doctors-1.jpg" />
+    <Content Include="Content\assets\img\doctors\doctors-2.jpg" />
+    <Content Include="Content\assets\img\doctors\doctors-3.jpg" />
+    <Content Include="Content\assets\img\doctors\doctors-4.jpg" />
+    <Content Include="Content\assets\img\favicon.png" />
+    <Content Include="Content\assets\img\features.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery-1.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery-2.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery-3.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery-4.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery-5.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery-6.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery-7.jpg" />
+    <Content Include="Content\assets\img\gallery\gallery-8.jpg" />
+    <Content Include="Content\assets\img\logo.png" />
+    <Content Include="Content\assets\img\slide\slide-1.jpg" />
+    <Content Include="Content\assets\img\slide\slide-2.jpg" />
+    <Content Include="Content\assets\img\slide\slide-3.jpg" />
+    <Content Include="Content\assets\img\testimonials\testimonials-1.jpg" />
+    <Content Include="Content\assets\img\testimonials\testimonials-2.jpg" />
+    <Content Include="Content\assets\img\testimonials\testimonials-3.jpg" />
+    <Content Include="Content\assets\img\testimonials\testimonials-4.jpg" />
+    <Content Include="Content\assets\img\testimonials\testimonials-5.jpg" />
+    <Content Include="Content\assets\js\main.js" />
+    <Content Include="Content\assets\scss\Readme.txt" />
+    <Content Include="Content\assets\vendor\animate.css\animate.compat.css" />
+    <Content Include="Content\assets\vendor\animate.css\animate.css" />
+    <Content Include="Content\assets\vendor\animate.css\animate.min.css" />
+    <Content Include="Content\assets\vendor\aos\aos.css" />
+    <Content Include="Content\assets\vendor\aos\aos.js" />
+    <Content Include="Content\assets\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\assets\vendor\boxicons\css\animations.css" />
+    <Content Include="Content\assets\vendor\boxicons\css\boxicons.css" />
+    <Content Include="Content\assets\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="Content\assets\vendor\boxicons\css\transformations.css" />
+    <Content Include="Content\assets\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\all.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\all.min.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\brands.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\brands.min.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\fontawesome.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\regular.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\regular.min.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\solid.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\solid.min.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\v4-font-face.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\v4-font-face.min.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\v4-shims.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\v5-font-face.css" />
+    <Content Include="Content\assets\vendor\fontawesome-free\css\v5-font-face.min.css" />
+    <Content Include="Content\assets\vendor\glightbox\css\glightbox.css" />
+    <Content Include="Content\assets\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="Content\assets\vendor\glightbox\css\plyr.css" />
+    <Content Include="Content\assets\vendor\glightbox\css\plyr.min.css" />
+    <Content Include="Content\assets\vendor\glightbox\js\glightbox.js" />
+    <Content Include="Content\assets\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="Content\assets\vendor\php-email-form\validate.js" />
+    <Content Include="Content\assets\vendor\purecounter\purecounter_vanilla.js" />
+    <Content Include="Content\assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="Content\assets\vendor\swiper\swiper-bundle.min.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -232,6 +328,46 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\assets\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="Content\assets\vendor\bootstrap-icons\bootstrap-icons.scss" />
+    <Content Include="Content\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="Content\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Content\assets\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="Content\assets\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="Content\assets\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="Content\assets\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="Content\assets\vendor\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\assets\vendor\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\assets\vendor\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\assets\vendor\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\assets\vendor\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\assets\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <Content Include="Content\assets\vendor\fontawesome-free\webfonts\fa-v4compatibility.ttf" />
+    <Content Include="Content\assets\vendor\fontawesome-free\webfonts\fa-v4compatibility.woff2" />
+    <Content Include="Content\assets\vendor\purecounter\purecounter_vanilla.js.map" />
+    <Content Include="Content\assets\vendor\swiper\swiper-bundle.min.js.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -398,7 +534,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50886</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44389/</IISUrl>
+          <IISUrl>http://localhost:50887/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:50887/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
