@@ -45,8 +45,8 @@
 
                     <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center text-decoration-none">
                         <li class="nav-item">
-                                @Html.ActionLink("Acasa", "Index", "Home")
-                            
+                            @Html.ActionLink("Acasa", "Index", "Home")
+
                         </li>
                         <li class="nav-item"> @Html.ActionLink("Doctori", "Index", "Doctors")</li>
                         @if (User.IsInRole("Patient"))
@@ -56,15 +56,15 @@
                         }
                         @if (User.IsInRole("Admin"))
                         {
-                            <li class="nav-item">@Html.ActionLink("Afisare specializari", "Index", "Specializations")</li>
-                            <li class="nav-item">@Html.ActionLink("Adaugare specializari", "New", "Specializations")</li>
-                            <li class="nav-item">@Html.ActionLink("Adaugare Doctor", "New", "Doctors")</li>
+                            <li class="nav-item">@Html.ActionLink("Adaugare specializari", "Create", "Specializations")</li>
+                            <li class="nav-item">@Html.ActionLink("Adaugare Doctor", "Create", "Doctors")</li>
                             <li class="nav-item">@Html.ActionLink("Afisare utilizatori", "Index", "Users")</li>
                         }
-
+                        <li class="nav-item">@Html.ActionLink("Afisare specializari", "Index", "Specializations")</li>
                         <li class="nav-item">@Html.ActionLink("Despre noi", "About", "Home")</li>
                         <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home")</li>
                     </ul>
+                    @Html.Partial("_LoginPartial")
                 </div>
             </div>
             <div class="col-sm p-3 min-vh-100">

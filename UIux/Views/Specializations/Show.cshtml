@@ -1,0 +1,40 @@
+﻿﻿@model UIux.Models.Specialization
+@if (TempData.ContainsKey("message"))
+{
+    <h1 class="text-center"> @ViewBag.message&nbsp;</h1>
+    <br />
+}
+<h2 class="text-center">@Model.Name</h2>
+<br />
+<div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xl-3">
+    @foreach (var freshener in ViewBag.Doctors)
+    {
+        <div class="col mb-4">
+            <div class="card h-100 border-secondary mb-3">
+                <a href="/Doctors/Show/@freshener.DoctorId">
+                    <img class="card-img-top" src="@freshener.Photo" alt="doctor image" style="height:200px;" />
+                </a>
+                <div class="card-body">
+                    <a href="/Doctors/Show/@freshener.DoctorId" style="color:black">
+                        <h3 class="card-title text-center">@freshener.FirstName @freshener.SecondName</h3>
+                    </a>
+                </div>           
+            </div>
+        </div>
+    }
+</div>
+<br />
+<div class="row text-center">
+    <div class="col-md-12">
+        <a class="btn btn-info justify-content-center" href="/Specializations/Index"><i class="fa fa-arrow-circle-o-left">&ensp;Back to all Specs</i></a><br />
+        @if (User.IsInRole("Admin"))
+        {
+            <br />
+            <form method="post" action="/Specializations/Delete/@Model.SpecializationID">
+                @Html.HttpMethodOverride(HttpVerbs.Delete)
+                <button class="btn btn-danger justify-content-center" type="submit"><i class="fa fa-trash">&ensp;Delete Spec</i></button>
+            </form>
+        }
+
+    </div>
+</div>

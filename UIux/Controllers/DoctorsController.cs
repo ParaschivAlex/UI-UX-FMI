@@ -170,7 +170,7 @@ namespace UIux.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
-        public ActionResult Create([Bind(Include = "DoctorId,FirstName,SecondName,SpecializationID,IsAvailable,PriceRate,PhoneNumber,Photo,Email")] Doctor doctor)
+        public ActionResult Create([Bind(Include = "DoctorId, FirstName, SecondName, SpecializationID, IsAvailable, PriceRate, PhoneNumber, Email, Photo, Rating")] Doctor doctor)
         {
             if (ModelState.IsValid)
             {
